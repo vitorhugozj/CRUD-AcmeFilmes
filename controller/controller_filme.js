@@ -39,7 +39,7 @@ const setNovoFilme = async function(dadosFilme, content) {
                     if (novoFilme) {
 
                         let idFilme = await filmesDAO.getId()
-
+                        
                         novoFilmeJson.status = ERROR_Messages.SUCCESS_CREATED_ITEM.status
                         novoFilmeJson.status_code = ERROR_Messages.SUCCESS_CREATED_ITEM.status_code
                         novoFilmeJson.message = ERROR_Messages.SUCCESS_CREATED_ITEM.message
@@ -60,7 +60,6 @@ const setNovoFilme = async function(dadosFilme, content) {
     }
 
 }
-
 const setAtualizarFilme = async function(novosDados, content) {
     if (String(content).toLowerCase() == 'application/json') {
         try {
@@ -81,17 +80,14 @@ const setAtualizarFilme = async function(novosDados, content) {
     }
 }
 
-
 const setExcluirFilme = async function() {
 
 }
-
 const getListarFilmes = async function() {
 
     try {
 
         let filmesJson = {}
-
         let dadosFilmes = await filmesDAO.selectAllFilmes()
 
         if (dadosFilmes) {

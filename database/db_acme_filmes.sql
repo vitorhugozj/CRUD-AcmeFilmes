@@ -16,6 +16,47 @@ unique key(id),
 unique index(id)
 );
 
+create table tbl_ator (
+
+id int not null auto_increment primary key,
+nome varchar(80) not null,
+nome_artistico varchar(80) not null,
+foto varchar(255),
+data_nasc date not null,
+data_morte date,
+biografia TEXT,
+sexo varchar(1)
+);
+
+create table tbl_classificacao(
+
+id int not null auto_increment primary key,
+sigla varchar(2),
+nome varchar(45),
+descricao varchar (300),
+icone varchar(150)
+);
+
+create table tbl_sexo(
+
+id int not null auto_increment primary key,
+sigla varchar (2),
+nome varchar(50)
+);
+
+
+create table tbl_nacionalidade(
+
+id int not null auto_increment primary key,
+nome varchar(50)
+);
+
+
+create table filme_genero(
+
+id int not null auto_increment primary key,
+
+)
 insert into tbl_filme(nome, sinopse, duracao, data_lancamento, data_relancamento, foto_capa, valor_unitario) values 
 ('Carros 2', 'Sinopse filme 123', '02:03:00', '2015-06-25', null, 'https://cdn.autopapo.com.br/box/uploads/2022/08/01142413/poster-carros-na-estrada.jpg', '23,99'),
 ('Vingadores', 'Sinopse filme 123', '04:15:00', '2021-01-03', null, 'https://www.themoviedb.org/t/p/original/vGIIl89vglo66yUfbuTxzNAs4y5.jpg', '29,99'),
